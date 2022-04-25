@@ -17,7 +17,6 @@ const PostList = () => {
         setPost(res.data);
     };
 
-
     return (
         <div className="d-flex flex-row flew-wrap justify-content-between">
             {Object.values(post).map((p) => (
