@@ -12,11 +12,17 @@ app.use(express.json());
 
 app.post('/events', async (req, res) => {
     const event = req.body;
+    console.log('Received event:', req.body.type);
 
+    //send to post
     await axios.post('http://localhost:4000/events', event).catch((err) => console.log(err.message));
+    //send to comments
     await axios.post('http://localhost:4001/events', event).catch((err) => console.log(err.message));
+    //send to query
     await axios.post('http://localhost:4002/events', event).catch((err) => console.log(err.message));
-    res.status(200);
+    //send to moderation
+    await axios.post('http://localhost:4004/events', event).catch((err) => console.log(err.message));
+    res.send({ status: 'OK' });
 });
 
 

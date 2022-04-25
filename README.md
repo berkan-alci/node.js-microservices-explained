@@ -37,11 +37,11 @@ This is a simple application where we have a React app that acts as the UI. Here
 -   Node.js & Express
 -   NO Data storage (for simplicity sake)
 
-#### Routes:
-
 #### Initialization & Startup
 
 -   go into the main directory
 -   type: `npm init`
+
+#### Routes:
 
 #### Related images:
