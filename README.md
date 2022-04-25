@@ -20,6 +20,10 @@ This is a simple application where we have a React app that acts as the UI. Here
 -   Query dependency `npm i` & `npm run dev` to launch
 -   Event-Bus `npm i` & `npm run dev` to launch
 
+#### Example of a monolithic backend:
+
+![Diagram monolithic](https://github.com/berkan-alci/node.js-microservices-explained/blob/main/readme-images/Monolithic-Monolithic.png)
+
 #### Example of events:
 
 ![Diagram event](https://github.com/berkan-alci/node.js-microservices-explained/blob/main/readme-images/Service-explanantion.png)
