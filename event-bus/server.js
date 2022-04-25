@@ -10,10 +10,12 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 
+const events = [];
+
 app.post('/events', async (req, res) => {
     const event = req.body;
     console.log('Received event:', req.body.type);
-
+    events.push(event);
     //send to post
     await axios.post('http://localhost:4000/events', event).catch((err) => console.log(err.message));
     //send to comments
@@ -25,7 +27,9 @@ app.post('/events', async (req, res) => {
     res.send({ status: 'OK' });
 });
 
-
+app.get('/events', async (req, res) => {
+    res.send(events);
+})
 
 app.listen(4005, () => {
     console.log(`http://localhost:4005`);
