@@ -14,11 +14,11 @@ This is a simple application where we have a React app that acts as the UI. Here
 
 #### Dependencies:
 
--   Post dependency `npm init` to launch
--   Comment dependency `npm init` to launch
--   Moderation dependency `npm init` to launch
--   Query dependency `npm init` to launch
--   Event-Bus `npm init` to launch
+-   Post dependency `npm i` & `npm run dev` to launch
+-   Comment dependency `npm i` & `npm run dev` to launch
+-   Moderation dependency `npm i` & `npm run dev` to launch
+-   Query dependency `npm i` & `npm run dev` to launch
+-   Event-Bus `npm i` & `npm run dev` to launch
 
 #### Example of events:
 
