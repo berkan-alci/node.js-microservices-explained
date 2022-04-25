@@ -8,40 +8,18 @@ This application is meant as a demonstration on how microservices work. This is 
 
 This is a simple application where we have a React app that acts as the UI. Here a user can create a post. People can comment on these posts. Below the post creation, there'll be a section where users can view all posts with their respective comments. You can also create comments on the available posts.
 
-### Front-End
+### Front-End:
 
-## Tech stack:
+### Backend (Micro services):
 
--   React
+#### Dependencies:
 
-### Posts dependency
+-   Post dependency `npm init` to launch
+-   Comment dependency `npm init` to launch
+-   Moderation dependency `npm init` to launch
+-   Query dependency `npm init` to launch
+-   Event-Bus `npm init` to launch
 
-#### Tech stack:
+#### Example of events:
 
--   Node.js & Express
--   NO Data storage (for simplicity sake)
-
-#### Routes:
-
-#### Initialization & Startup:
-
--   go into the main directory
--   type: `npm init`
-
-#### Related images:
-
-### Comments dependency
-
-#### Tech stack:
-
--   Node.js & Express
--   NO Data storage (for simplicity sake)
-
-#### Initialization & Startup
-
--   go into the main directory
--   type: `npm init`
-
-#### Routes:
-
-#### Related images:
+![Diagram event](https://github.com/berkan-alci/node.js-microservices-explained/blob/main/readme-images/Service-explanantion.png)
