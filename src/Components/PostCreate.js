@@ -6,7 +6,7 @@ const PostCreate = () => {
 
     const submit = async (e) => {
         e.preventDefault();
-        await axios.post('http://localhost:4000/posts', { title });
+        await axios.post('http://microservicetest.com/post/create', { title });
 
         setTitle('');
     };
