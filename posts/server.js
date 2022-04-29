@@ -13,7 +13,7 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-app.post('/post', async (req, res) => {
+app.post('/post/create', async (req, res) => {
     const id = randomBytes(4).toString('hex');
     const { title } = req.body;
     posts[id] = {

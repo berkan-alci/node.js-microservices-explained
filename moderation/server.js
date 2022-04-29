@@ -8,7 +8,6 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-
 app.post('/events', async (req, res) => {
     const { type, data } = req.body;
     console.log('Received event:', req.body.type);
@@ -22,15 +21,13 @@ app.post('/events', async (req, res) => {
                 id: data.id,
                 postId: data.postId,
                 status,
-                content: data.content,
+                content: data.content
             }
-        })
+        });
     }
 
     res.send({});
 });
-
-
 
 
 app.listen(4003, () => {

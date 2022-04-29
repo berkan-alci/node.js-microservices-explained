@@ -10,7 +10,7 @@ spec:
     - host: microservicetest.com
       http:
         paths:
-          - path: /post
+          - path: /post/create
             pathType: Prefix
             backend:
               service:
