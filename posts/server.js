@@ -23,8 +23,10 @@ app.post('/posts', async (req, res) => {
     posts[id] = {
         id, title
     };
-
-    await axios.post('http://localhost:4005/events', { type: 'PostCreated', data: { id, title } }).catch((err) => console.log(err.message));
+    //local
+    // await axios.post('http://localhost:4005/events', { type: 'PostCreated', data: { id, title } }).catch((err) => console.log(err.message));
+    //k8s
+    await axios.post('http://event-bus-srv:4005/events', { type: 'PostCreated', data: { id, title } }).catch((err) => console.log(err.message));
 
     res.status(201).send(posts[id]);
 });
@@ -37,5 +39,5 @@ app.post('/events', async (req, res) => {
 });
 
 app.listen(4000, () => {
-    console.log(`http://localhost:4000`);
+    console.log(`http://localhost:4000 k8s test`);
 });
