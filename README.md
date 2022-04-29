@@ -39,4 +39,4 @@ This is a simple application where we have a React app that acts as the UI. Here
 
 #### Diagram with Kubernetes cluster:
 
-![Diagram K8S event]()
+![Diagram K8S event](https://github.com/berkan-alci/node.js-microservices-explained/blob/main/readme-images/service-k8s.explained-k8s.png)
