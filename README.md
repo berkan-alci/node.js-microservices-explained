@@ -14,11 +14,20 @@ This is a simple application where we have a React app that acts as the UI. Here
 
 #### Dependencies:
 
+-   NOTE: MAKE SURE TO CHANGE AXIOS FETCHES FROM K8S LINKS TO LOCALHOST!!!
 -   Post dependency `npm i` & `npm run dev` to launch
 -   Comment dependency `npm i` & `npm run dev` to launch
 -   Moderation dependency `npm i` & `npm run dev` to launch
 -   Query dependency `npm i` & `npm run dev` to launch
 -   Event-Bus `npm i` & `npm run dev` to launch
+
+#### Launch with Docker & Kubernetes:
+
+-   Change hosts file in System32/drivers/etc/hosts
+-   Add: `127.0.0.1 microservicetest.com` at the bottom of the document.
+-   Install skaffold at `skaffold.dev`
+-   run `skaffold dev` in the root of the project.
+-   go to `microservicetest.com` to see the frontend & interact with the microservice test
 
 #### Example of a monolithic backend:
 
@@ -27,3 +36,7 @@ This is a simple application where we have a React app that acts as the UI. Here
 #### Example of events:
 
 ![Diagram event](https://github.com/berkan-alci/node.js-microservices-explained/blob/main/readme-images/Service-explanantion.png)
+
+#### Diagram with Kubernetes cluster:
+
+![Diagram K8S event]()
