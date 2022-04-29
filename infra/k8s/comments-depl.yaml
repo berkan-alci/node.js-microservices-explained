@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: comments
-          image: berkanalci/ms-eb:latest
+          image: berkanalci/ms-comments:latest
 ---
 apiVersion: v1
 kind: Service
 metadata: 
-  name: comments-srv
+  name: comments-cluster-srv
 spec:
   selector:
     app: comments

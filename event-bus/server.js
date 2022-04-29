@@ -17,15 +17,13 @@ app.post('/events', async (req, res) => {
     console.log('Received event:', req.body.type);
     events.push(event);
     //send to post
-    // await axios.post('http://localhost:4000/events', event).catch((err) => console.log(err.message));
     await axios.post('http://posts-cluster-srv:4000/events', event).catch((err) => console.log(err.message));
-
     //send to comments
-    // await axios.post('http://localhost:4001/events', event).catch((err) => console.log(err.message));
+    await axios.post('http://comments-cluster-srv:4001/events', event).catch((err) => console.log(err.message));
     // //send to query
-    // await axios.post('http://localhost:4002/events', event).catch((err) => console.log(err.message));
+    await axios.post('http://query-cluster-srv:4002/events', event).catch((err) => console.log(err.message));
     // //send to moderation
-    // await axios.post('http://localhost:4004/events', event).catch((err) => console.log(err.message));
+    await axios.post('http://moderation-cluster-srv:4003/events', event).catch((err) => console.log(err.message));
     res.send({ status: 'OK' });
 });
 

@@ -14,12 +14,12 @@ spec:
     spec:
       containers:
         - name: query
-          image: berkanalci/ms-eb:latest
+          image: berkanalci/ms-query:latest
 ---
 apiVersion: v1
 kind: Service
 metadata: 
-  name: query-srv
+  name: query-cluster-srv
 spec:
   selector:
     app: query

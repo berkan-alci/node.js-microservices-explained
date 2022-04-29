@@ -14,18 +14,18 @@ spec:
     spec:
       containers:
         - name: moderation
-          image: berkanalci/ms-eb:latest
+          image: berkanalci/ms-moderation:latest
 ---
 apiVersion: v1
 kind: Service
 metadata: 
-  name: moderation-srv
+  name: moderation-cluster-srv
 spec:
   selector:
     app: moderation
   ports:
     - name: moderation
       protocol: TCP
-      port: 4004
-      targetPort: 4004
+      port: 4003
+      targetPort: 4003
    
