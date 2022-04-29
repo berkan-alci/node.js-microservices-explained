@@ -12,7 +12,7 @@ This is a simple application where we have a React app that acts as the UI. Here
 
 ### Backend (Micro services):
 
-#### Dependencies:
+#### Dependencies (for the people not utilizing docker):
 
 -   NOTE: MAKE SURE TO CHANGE AXIOS FETCHES FROM K8S LINKS TO LOCALHOST!!!
 -   Post dependency `npm i` & `npm run dev` to launch
@@ -21,7 +21,16 @@ This is a simple application where we have a React app that acts as the UI. Here
 -   Query dependency `npm i` & `npm run dev` to launch
 -   Event-Bus `npm i` & `npm run dev` to launch
 
-#### Launch with Docker & Kubernetes:
+#### Pull & Run Docker containers:
+
+-   Post container: `docker pull berkanalci/ms-post`
+-   Comment container: `docker pull berkanalci/ms-comments`
+-   Moderation container: `docker pull berkanalci/ms-moderation`
+-   Query container: `docker pull berkanalci/ms-query`
+-   Event-bus container: `docker pull berkanalci/ms-eb`
+-   Running builds: `docker run [image name] -p [TCP PORT]:[Docker port]`
+
+#### Launch dev server with Kubernetes:
 
 -   Change hosts file in System32/drivers/etc/hosts
 -   Add: `127.0.0.1 microservicetest.com` at the bottom of the document.
